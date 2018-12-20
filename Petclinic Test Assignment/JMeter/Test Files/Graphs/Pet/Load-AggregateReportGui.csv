@@ -1,0 +1,3 @@
+sampler_label,aggregate_report_count,average,aggregate_report_median,aggregate_report_90%_line,aggregate_report_min,aggregate_report_max,aggregate_report_error%,aggregate_report_rate,aggregate_report_bandwidth,aggregate_report_stddev
+LOAD - Get,54601,73,41,187,1,752,0.7003717880624897,770.4062195758611,2034.555827964281,77.10142897017097
+TOTAL,54601,73,41,187,1,752,0.7003717880624897,770.4062195758611,2034.555827964281,77.10142897017097
