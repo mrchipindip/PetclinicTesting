@@ -1,6 +1,5 @@
 package com.cognizant;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
 
@@ -16,24 +15,20 @@ public class User {
 	private Response response;
 	private ValidatableResponse json;
 
-	@Test
-	public void addOwner() {
-		request = RestAssured.given().contentType(ContentType.JSON);
-		request.header("Content-Type", "application/json");
-
-		JSONObject jsonObject = new JSONObject();
-		JSONArray jsonArray = new JSONArray();
-		jsonObject.put("enabled", true);
-		jsonObject.put("password", "admin");
-		jsonObject.put("roles", jsonArray);
-		jsonArray.put("id", 0);
-		jsonArray.put("name", "Chestar");
-		jsonObject.put("username", "admin");
-
-		request.body(jsonObject.toString());
-
-		response = request.post(Const.address + "/api/users");
-		json = response.then().statusCode(201);
-	}
+//	@Test
+//	public void addOwner() {
+//		request = RestAssured.given().contentType(ContentType.JSON);
+//		request.header("Content-Type", "application/json");
+//
+//		JSONObject jsonObject = new JSONObject();
+//		jsonObject.put("enabled", true);
+//		jsonObject.put("password", "admin");
+//		jsonObject.put("username", "admin");
+//
+//		request.body(jsonObject.toString());
+//
+//		response = request.post(Const.address + "/api/users");
+//		json = response.then().statusCode(201);
+//	}
 
 }
