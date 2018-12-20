@@ -22,61 +22,48 @@ public class PetType {
 		json = response.then().statusCode(200);
 	}
 
-	// @Test
-	// public void addPets() {
-	// request = RestAssured.given().contentType(ContentType.JSON);
-	// request.header("Content-Type", "application/json");
-	//
-	// JSONObject jsonObject = new JSONObject();
-	// jsonObject.put("birthDate", "2018/12/20");
-	// jsonObject.put("id", 0);
-	// jsonObject.put("name", "Chestar");
-	// jsonObject.put("type", "1");
-	//
-	// request.body(jsonObject.toString());
-	//
-	// response = request.post(Const.address + "/api/pets");
-	// json = response.then().statusCode(201);
-	// }
+	@Test
+	public void addPetType() {
+		request = RestAssured.given().contentType(ContentType.JSON);
+		request.header("Content-Type", "application/json");
 
-	// @Test
-	// public void getPetTypes() {
-	// request = RestAssured.given().contentType(ContentType.JSON);
-	// response = request.when().get(Const.address + "/api/pets/pettypes");
-	// json = response.then().statusCode(200);
-	// }
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("id", 0);
+		jsonObject.put("name", "Chestar");
 
-	// @Test
-	// public void deletePet() {
-	// request = RestAssured.given().contentType(ContentType.JSON);
-	// response = request.when().delete(Const.address + "/api/pets/13");
-	// json = response.then().statusCode(204);
-	// }
+		request.body(jsonObject.toString());
 
-	// @Test
-	// public void getPet() {
-	// request = RestAssured.given().contentType(ContentType.JSON);
-	// response = request.when().get(Const.address + "/api/owners/2");
-	// json = response.then().statusCode(200);
-	// }
+		response = request.post(Const.address + "/api/pettypes");
+		json = response.then().statusCode(201);
+	}
 
-	// @Test
-	// public void updatePet() {
-	// request = RestAssured.given().contentType(ContentType.JSON);
-	// request.header("Content-Type", "application/json");
-	//
-	// JSONObject jsonObject = new JSONObject();
-	// jsonObject.put("address", "Anchorage");
-	// jsonObject.put("city", "Manchester");
-	// jsonObject.put("firstName", "Man");
-	// jsonObject.put("id", 13);
-	// jsonObject.put("lastName", "Chester");
-	// jsonObject.put("telephone", "07000000000");
-	//
-	// request.body(jsonObject.toString());
-	//
-	// response = request.when().put(Const.address + "/api/owners/13");
-	// json = response.then().statusCode(204);
-	// }
+	@Test
+	public void deletePetType() {
+		request = RestAssured.given().contentType(ContentType.JSON);
+		response = request.when().delete(Const.address + "/api/pets/6");
+		json = response.then().statusCode(204);
+	}
+
+	@Test
+	public void getPet() {
+		request = RestAssured.given().contentType(ContentType.JSON);
+		response = request.when().get(Const.address + "/api/pettypes/1");
+		json = response.then().statusCode(200);
+	}
+
+	@Test
+	public void updatePet() {
+		request = RestAssured.given().contentType(ContentType.JSON);
+		request.header("Content-Type", "application/json");
+
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("id", 7);
+		jsonObject.put("name", "Chestar");
+
+		request.body(jsonObject.toString());
+
+		response = request.when().put(Const.address + "/api/pettypes/7");
+		json = response.then().statusCode(204);
+	}
 
 }
