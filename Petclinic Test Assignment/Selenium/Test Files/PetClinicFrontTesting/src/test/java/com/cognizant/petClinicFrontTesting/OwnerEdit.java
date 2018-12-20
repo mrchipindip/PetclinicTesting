@@ -3,7 +3,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({InvalidOwners.class, InvalidVets.class})
-public class InvalidSuite {
-	
+@Suite.SuiteClasses({OwnerDelete.class, VetAdd.class})
+
+public class OwnerEdit {
+
 }

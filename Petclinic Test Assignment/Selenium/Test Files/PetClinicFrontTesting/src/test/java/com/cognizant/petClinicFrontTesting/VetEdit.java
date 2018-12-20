@@ -1,5 +1,5 @@
 package com.cognizant.petClinicFrontTesting;
 
-public class InvalidOwners {
+public class VetEdit {
 
 }
