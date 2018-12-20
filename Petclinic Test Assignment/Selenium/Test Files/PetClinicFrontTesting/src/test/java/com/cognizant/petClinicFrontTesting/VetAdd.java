@@ -138,13 +138,13 @@ public class VetAdd {
 	}
 
 	@Test
-	public void addInvalidNames() {
+	public void addInvalidEntries() {
 		String fname = "f";
 		String lname = "l";
 
 		driver.manage().window().maximize();
 		driver.get(Constants.URL);
-		test = reports.startTest("Add vet record via drop down.");
+		test = reports.startTest("Add INVALID vet record via drop down.");
 
 		NavBar navBar = PageFactory.initElements(driver, NavBar.class);
 		AddPages addPage = PageFactory.initElements(driver, AddPages.class);
