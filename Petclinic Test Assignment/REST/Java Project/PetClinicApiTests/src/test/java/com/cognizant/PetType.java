@@ -40,19 +40,19 @@ public class PetType {
 	@Test
 	public void deletePetType() {
 		request = RestAssured.given().contentType(ContentType.JSON);
-		response = request.when().delete(Const.address + "/api/pets/6");
+		response = request.when().delete(Const.address + "/api/pettypes/6");
 		json = response.then().statusCode(204);
 	}
 
 	@Test
-	public void getPet() {
+	public void getPetType() {
 		request = RestAssured.given().contentType(ContentType.JSON);
 		response = request.when().get(Const.address + "/api/pettypes/1");
 		json = response.then().statusCode(200);
 	}
 
 	@Test
-	public void updatePet() {
+	public void updatePetType() {
 		request = RestAssured.given().contentType(ContentType.JSON);
 		request.header("Content-Type", "application/json");
 

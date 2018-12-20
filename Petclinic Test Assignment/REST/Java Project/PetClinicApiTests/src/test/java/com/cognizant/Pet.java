@@ -26,23 +26,23 @@ public class Pet {
 		json = response.then().statusCode(200);
 	}
 
-	@Test
-	public void addPets() {
-		request = RestAssured.given().contentType(ContentType.JSON);
-		request.header("Content-Type", "application/json");
-
-
-		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("birthDate", "2018/12/20");
-		jsonObject.put("id", 0);
-		jsonObject.put("name", "Chestar");
-		jsonObject.put("type", "1");
-
-		request.body(jsonObject.toString());
-
-		response = request.post(Const.address + "/api/pets");
-		json = response.then().statusCode(201);
-	}
+//	@Test
+//	public void addPets() {
+//		request = RestAssured.given().contentType(ContentType.JSON);
+//		request.header("Content-Type", "application/json");
+//
+//
+//		JSONObject jsonObject = new JSONObject();
+//		jsonObject.put("birthDate", "2018/12/20");
+//		jsonObject.put("id", 0);
+//		jsonObject.put("name", "Chestar");
+//		jsonObject.put("type", "1");
+//
+//		request.body(jsonObject.toString());
+//
+//		response = request.post(Const.address + "/api/pets");
+//		json = response.then().statusCode(201);
+//	}
 
 	@Test
 	public void getPetTypes() {
@@ -51,17 +51,17 @@ public class Pet {
 		json = response.then().statusCode(200);
 	}
 
-//	@Test
-//	public void deletePet() {
-//		request = RestAssured.given().contentType(ContentType.JSON);
-//		response = request.when().delete(Const.address + "/api/pets/13");
-//		json = response.then().statusCode(204);
-//	}
+	@Test
+	public void deletePet() {
+		request = RestAssured.given().contentType(ContentType.JSON);
+		response = request.when().delete(Const.address + "/api/pets/13");
+		json = response.then().statusCode(204);
+	}
 
 	@Test
 	public void getPet() {
 		request = RestAssured.given().contentType(ContentType.JSON);
-		response = request.when().get(Const.address + "/api/owners/2");
+		response = request.when().get(Const.address + "/api/pets/2");
 		json = response.then().statusCode(200);
 	}
 
@@ -80,7 +80,7 @@ public class Pet {
 //
 //		request.body(jsonObject.toString());
 //
-//		response = request.when().put(Const.address + "/api/owners/13");
+//		response = request.when().put(Const.address + "/api/pets/13");
 //		json = response.then().statusCode(204);
 //	}
 	
