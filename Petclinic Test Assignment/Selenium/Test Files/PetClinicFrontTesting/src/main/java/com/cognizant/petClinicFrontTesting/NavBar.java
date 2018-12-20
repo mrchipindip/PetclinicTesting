@@ -46,7 +46,7 @@ public class NavBar {
 		return vetsAllBtn;
 	}
 
-	public WebElement getBetsAddBtn() {
+	public WebElement getVetsAddBtn() {
 		return vetsAddBtn;
 	}
 }

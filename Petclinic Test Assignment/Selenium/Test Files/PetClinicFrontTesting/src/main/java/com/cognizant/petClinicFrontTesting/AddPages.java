@@ -21,8 +21,9 @@ public class AddPages {
 	@FindBy(id = "telephone")
 	private WebElement telephone;
 
+	// Drop Down
 	@FindBy(id = "specialties")
-	private WebElement specialties;
+	private WebElement typeDropDown;
 
 	// Buttons
 	@FindBy(xpath = "/html/body/app-root/app-owner-add/div/div/form/div[7]/div/button[2]")
@@ -56,6 +57,10 @@ public class AddPages {
 
 	public WebElement getTelephone() {
 		return telephone;
+	}
+
+	public WebElement getTypeDropDown() {
+		return typeDropDown;
 	}
 
 	public WebElement getSaveOwnerBtn() {
