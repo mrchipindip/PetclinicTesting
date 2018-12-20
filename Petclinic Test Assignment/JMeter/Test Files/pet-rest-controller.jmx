@@ -89,7 +89,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -176,7 +176,7 @@
                 <stringProp name="Argument.value">{&#xd;
   &quot;birthDate&quot;: &quot;2018/12/20&quot;,&#xd;
   &quot;id&quot;: 0,&#xd;
-  &quot;name&quot;: &quot;Billy&quot;,&#xd;
+  &quot;name&quot;: &quot;Rex&quot;,&#xd;
   &quot;owner&quot;: {&#xd;
         &quot;id&quot;: 30,&#xd;
         &quot;firstName&quot;: &quot;Zak&quot;,&#xd;
@@ -184,8 +184,7 @@
         &quot;address&quot;: &quot;Anchorage 1&quot;,&#xd;
         &quot;city&quot;: &quot;Manchester&quot;,&#xd;
         &quot;telephone&quot;: &quot;012345&quot;,&#xd;
-        &quot;pets&quot;: [],&#xd;
-    &quot;telephone&quot;: &quot;string&quot;&#xd;
+        &quot;pets&quot;: []&#xd;
   },&#xd;
   &quot;type&quot;: {&#xd;
     &quot;id&quot;: 2,&#xd;
@@ -353,7 +352,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">C:\Users\Admin\Desktop\Team Win\Team Win repo\PetclinicTesting\Petclinic Test Assignment\JMeter\Test Files\Graphs\owner-load.csv</stringProp>
+            <stringProp name="filename">C:\Users\Admin\Desktop\Team Win\PetclinicTesting COPY\Petclinic Test Assignment\JMeter\Test Files\Graphs\Pet\pet-load.csv</stringProp>
           </ResultCollector>
           <hashTree/>
           <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
@@ -463,15 +462,52 @@
             <stringProp name="limitRows">150</stringProp>
             <stringProp name="lineWeight"></stringProp>
             <stringProp name="lowCountLimit"></stringProp>
-            <stringProp name="outputBaseFolder">C:\Users\Admin\Desktop\Team Win\Team Win repo\PetclinicTesting\Petclinic Test Assignment\JMeter\Test Files\Graphs</stringProp>
+            <stringProp name="outputBaseFolder">C:\Users\Admin\Desktop\Team Win\PetclinicTesting COPY\Petclinic Test Assignment\JMeter\Test Files\Graphs\Pet</stringProp>
             <boolProp name="paintGradient">true</boolProp>
             <boolProp name="paintZeroing">true</boolProp>
             <boolProp name="preventOutliers">false</boolProp>
             <boolProp name="relativeTimes">true</boolProp>
-            <stringProp name="resultsFileName">C:\Users\Admin\Desktop\Team Win\Team Win repo\PetclinicTesting\Petclinic Test Assignment\JMeter\Test Files\Graphs\owner-load.csv</stringProp>
+            <stringProp name="resultsFileName">C:\Users\Admin\Desktop\Team Win\PetclinicTesting COPY\Petclinic Test Assignment\JMeter\Test Files\Graphs\Pet\pet-load.csv</stringProp>
             <stringProp name="startOffset"></stringProp>
             <stringProp name="successFilter"></stringProp>
           </kg.apc.jmeter.listener.GraphsGeneratorListener>
+          <hashTree/>
+          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">C:\Users\Admin\Desktop\Team Win\PetclinicTesting COPY\Petclinic Test Assignment\JMeter\Test Files\Graphs\Pet\pet-load-agg.csv</stringProp>
+          </ResultCollector>
           <hashTree/>
         </hashTree>
       </hashTree>
@@ -561,7 +597,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename"></stringProp>
+            <stringProp name="filename">C:\Users\Admin\Desktop\Team Win\PetclinicTesting COPY\Petclinic Test Assignment\JMeter\Test Files\Graphs\Pet\pet-spike.csv</stringProp>
           </ResultCollector>
           <hashTree/>
           <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
@@ -653,6 +689,70 @@
             <boolProp name="include_checkbox_state">false</boolProp>
             <boolProp name="exclude_checkbox_state">false</boolProp>
           </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+          <kg.apc.jmeter.listener.GraphsGeneratorListener guiclass="TestBeanGUI" testclass="kg.apc.jmeter.listener.GraphsGeneratorListener" testname="jp@gc - Graphs Generator" enabled="true">
+            <boolProp name="aggregateRows">false</boolProp>
+            <boolProp name="autoScaleRows">true</boolProp>
+            <stringProp name="endOffset"></stringProp>
+            <stringProp name="excludeLabels"></stringProp>
+            <boolProp name="excludeSamplesWithRegex">false</boolProp>
+            <intProp name="exportMode">0</intProp>
+            <stringProp name="filePrefix">Spike-</stringProp>
+            <stringProp name="forceY"></stringProp>
+            <stringProp name="granulation">100</stringProp>
+            <intProp name="graphHeight">600</intProp>
+            <intProp name="graphWidth">800</intProp>
+            <stringProp name="includeLabels"></stringProp>
+            <boolProp name="includeSamplesWithRegex">false</boolProp>
+            <stringProp name="limitRows">150</stringProp>
+            <stringProp name="lineWeight"></stringProp>
+            <stringProp name="lowCountLimit"></stringProp>
+            <stringProp name="outputBaseFolder">C:\Users\Admin\Desktop\Team Win\PetclinicTesting COPY\Petclinic Test Assignment\JMeter\Test Files\Graphs\Pet</stringProp>
+            <boolProp name="paintGradient">true</boolProp>
+            <boolProp name="paintZeroing">true</boolProp>
+            <boolProp name="preventOutliers">false</boolProp>
+            <boolProp name="relativeTimes">true</boolProp>
+            <stringProp name="resultsFileName">C:\Users\Admin\Desktop\Team Win\PetclinicTesting COPY\Petclinic Test Assignment\JMeter\Test Files\Graphs\Pet\pet-spike.csv</stringProp>
+            <stringProp name="startOffset"></stringProp>
+            <stringProp name="successFilter"></stringProp>
+          </kg.apc.jmeter.listener.GraphsGeneratorListener>
+          <hashTree/>
+          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">C:\Users\Admin\Desktop\Team Win\PetclinicTesting COPY\Petclinic Test Assignment\JMeter\Test Files\Graphs\Pet\pet-spike-agg.csv</stringProp>
+          </ResultCollector>
           <hashTree/>
         </hashTree>
       </hashTree>
